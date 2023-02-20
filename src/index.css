@@ -29,3 +29,10 @@ body,
   font-family: 'futura_l';
   src: url('./font/futura\ light\ bt.ttf') format('truetype');
 }
+
+.container {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
+}

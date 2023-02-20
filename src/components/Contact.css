@@ -1,0 +1,61 @@
+.contact-brands {
+  margin-top: 1.8rem;
+}
+
+.contact-brands a{
+  font-size: 1.8rem !important;
+}
+
+.contact-brands a:first-child{
+  margin-left: 0;
+}
+
+.contact-picture {
+  position: absolute;
+  height: 80%;
+  top: 10%;
+  right: 100px;
+  z-index: 14;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1065px) {
+  .contact-picture {
+    height: 85% !important;
+    top: 7.5% !important;
+  }
+}
+
+@media only screen and (max-width: 661px) {
+  .contact-picture {
+    width: 60%;
+    left: 20%;
+    height: 50% !important;
+    top: 15% !important;
+    transform: scale(1.4) !important;
+  }
+
+  img {
+    height: auto !important;
+    border-radius: 50% !important;
+  }
+
+  .contact-brands a{
+    font-size: 2.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 561px) {
+  .contact-title {
+    left: -150px !important;
+  }
+}
+
+img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 25px;
+  z-index: 14;
+}

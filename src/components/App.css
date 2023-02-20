@@ -1,14 +1,6 @@
 #root {
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #1b232d;
-}
-
-.cover-sheet {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  z-index: 20;
-  position: absolute;
 }
 
 .title-text {
@@ -19,7 +11,7 @@
   font-family: 'futura_m';
   color: #ffffff;
   letter-spacing: 8px;
-  z-index: 11;
+  z-index: 15;
   line-height: 1.25em;
   text-shadow: 0 12px 12px rgb(2 11 22 / 20%);
 }
@@ -59,7 +51,8 @@
 .card5,
 .card6,
 .card7,
-.card8 {
+.card8,
+.card9 {
   position: absolute;
   border-radius: 5px;
   background-size: contain;
@@ -77,42 +70,42 @@
 .card1 {
   width: 45ch;
   height: 45ch;
-  background-image: url(./img/moon.svg);
+  background-image: url(../img/moon.svg);
   z-index: 10;
 }
 
 .card2 {
   width: 50ch;
   height: 50ch;
-  background-image: url(./img/cloud1.svg);
+  background-image: url(../img/cloud1.svg);
   z-index: 10;
 }
 
 .card3 {
   width: 50ch;
   height: 50ch;
-  background-image: url(./img/cloud3.svg);
+  background-image: url(../img/cloud3.svg);
   z-index: 10;
 }
 
 .card4 {
   width: 50ch;
   height: 50ch;
-  background-image: url(./img/cloud2.svg);
+  background-image: url(../img/cloud2.svg);
   z-index: 10;
 }
 
 .card5 {
   width: 50ch;
   height: 50ch;
-  background-image: url(./img/b_cloud02.svg);
+  background-image: url(../img/b_cloud02.svg);
   z-index: 10;
 }
 
 .card6 {
   width: 50ch;
   height: 50ch;
-  background-image: url(./img/b_cloud01.svg);
+  background-image: url(../img/b_cloud01.svg);
   z-index: 10;
 }
 
@@ -128,19 +121,35 @@
 .card8 {
   width: 150ch;
   height: 150ch;
-  background-image: url(./img/moon-light.svg);
+  z-index: 1;
+  background-image: url(../img/moon-light.svg);
+  background-attachment: fixed;
+}
+
+.card9 {
+  width: 150ch;
+  height: 150ch;
+  z-index: 1;
+  background-image: url(../img/star.svg);
   background-attachment: fixed;
 }
 
 .moon-container {
-  position: absolute;
+  position: relative;
+}
+
+.moon-container-no-light {
   width: 50%;
   height: 80%;
-  top: 10%;
+  /* top: 10%; */
   display: flex;
   align-items: center;
   justify-content: center;
   left: max(660px, 55%);
+}
+
+.z-13 {
+  z-index: 13;
 }
 
 /* Media Queries */
@@ -167,6 +176,11 @@
   }
 }
 
+@media only screen and (max-width: 1065px) {
+  .title-text {font-size: 4.5rem;
+  }
+}
+
 @media only screen and (max-width: 881px) {
   .moon-container {
     left: 48%;
@@ -174,18 +188,44 @@
 
   .title-text {
     transform: scale(0.7);
-    left: -95px;
+    left: -10%;
   }
 }
 
 @media only screen and (max-width: 661px) {
   .moon-container {
     left: 25%;
-    top: 3%;
+    /* top: 3%; */
+    top: -50px;
   }
 
   .title-text {
-    top: 33%;
-    transform: scale(0.65);
+    top: 40%;
+    transform: scale(0.45);
+  }
+}
+
+@media only screen and (max-width: 561px) {
+  .header-container {
+    padding: 40px 20px 0;
+  }
+
+  .header-title {
+    font-size: 1rem;
+  }
+
+  .brands-list a {
+    font-size: 1rem;
+    margin: 0 0.8rem;
+  }
+
+  .title-text {
+    left: -110px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .title-text {
+    left: -135px;
   }
 }
